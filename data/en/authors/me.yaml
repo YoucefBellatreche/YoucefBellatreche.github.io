@@ -1,0 +1,98 @@
+role: Associate Professor of Economics (Maître de conférences A, HDR)
+bio: I am an Associate Professor (Maître de conférences, class A) with the habilitation to supervise research (HDR) at the University of Algiers 3, and hold a PhD in Economics from the Institute of European Studies, Paris 8 Vincennes University. My research covers career guidance and the labour-market integration of young graduates; employment, unemployment and income; entrepreneurship and business creation; economic development in developing countries; and North–South regional integration policies. Since 2025 I have been Head of the university's Career Development Centre (CDC). My background also includes several years of experience in the business world, in company management and international trade between Europe and the Maghreb.
+affiliations:
+- name: University of Algiers 3
+  url: https://www.univ-alger3.dz/
+links:
+- icon: at-symbol
+  url: mailto:bellatreche.youcef@univ-alger3.dz
+  label: Contact me
+interests:
+- Career guidance and labour-market integration of young graduates
+- Employment, unemployment and income
+- Entrepreneurship, innovation and business creation
+- Economic development in developing countries
+- Economic policies for regional integration (North–South)
+education:
+- degree: Habilitation to supervise research (HDR) in Economics
+  institution: University of Algiers 3
+  end: '2021-11-30'
+- degree: PhD in Economics
+  institution: Paris 8 Vincennes University – Institute of European Studies
+  end: '2013-07-31'
+  summary: 'Thesis: *The partnership between Algeria and the European Union for development: a difficult transition to a market economy*, defended in July 2013 at the Institute of European Studies (IEE), CEME laboratory (Centre for the Study of Change in Europe). Supervisor: Prof. Bernard Maris; co-supervisor: Dr Gilles Raveaud, maître de conférences. Distinction: *très honorable*. [Read the thesis abstract →](/en/publications/these-doctorat/)'
+- degree: DEA (Master's level) – Studies of Contemporary Maghreb Societies
+  institution: Maghreb-Europe Institute, Paris 8 Vincennes University
+  end: '2006-01-31'
+  summary: 'Dissertation: *The socio-economic and political stakes of the housing crisis in Algeria*. Co-supervised by Prof. Aïssa Kadri and Prof. Gérard Prévost.'
+- degree: Maîtrise in Economics – International Economics
+  institution: Paris 8 Vincennes University (UFR AES)
+  end: '2005-12-31'
+  summary: UFR Economic and Social Administration (AES), International Economics option.
+- degree: Licence (4-year degree) in Commercial Sciences – Finance
+  institution: Saad Dahleb University, Blida
+  end: '2002-06-30'
+  summary: 'Dissertation: *The privatisation of the banking sector in Algeria: a necessity in the face of difficulties*, with a case study carried out during an end-of-studies internship at a financial investment company in Algiers.'
+- degree: Baccalauréat – Management and Economics stream
+  institution: Si El Houes High School, Lakhdaria (Bouira)
+  end: '1997-06-30'
+experience:
+- role: Associate Professor (Maître de conférences A, HDR)
+  org: University of Algiers 3 – Departments of Economics, Management Sciences and Communication
+  start: '2017-02-01'
+  summary: 'Lectures and tutorials at bachelor''s and master''s level: Departments of Economics, Management Sciences and Commercial Sciences.'
+- role: Member of the Laboratory of Governance and Modernisation of Public Management
+  org: University of Algiers 3 – research team on professional career management
+  start: '2025-09-01'
+- role: Head of the Career Development Centre (CDC)
+  org: University of Algiers 3
+  start: '2025-02-01'
+  summary: University interface specialising in training and career guidance for students.
+- role: Teaching and Research Fellow (ATER)
+  org: Paris 1 Panthéon-Sorbonne University – Sorbonne School of Economics (UFR 02)
+  start: '2022-09-01'
+  end: '2024-09-30'
+  summary: Member of the Sorbonne School of Economics (UFR 02, Pierre Mendès France Centre). Lectures and tutorials from first- to third-year undergraduate level.
+- role: Visiting researcher – Political Economy team
+  org: Sorbonne Centre for Economics (CES), Paris 1 Panthéon-Sorbonne University
+  start: '2022-11-01'
+- role: Director of the Entrepreneurship House (Maison de l'entrepreneuriat)
+  org: University of Algiers 3
+  start: '2020-01-01'
+  end: '2021-01-31'
+  summary: Training sessions and experience-sharing round tables, entrepreneurship open days with public and private bodies, and follow-up of students' investment projects with banks and ANADE.
+- role: Certified career guidance counsellor (World Learning Algeria)
+  org: University of Algiers 3
+  start: '2019-04-01'
+  end: '2022-06-30'
+  summary: Facilitator and trainer in job-search techniques at the University of Algiers 3 CDC.
+- role: Part-time lecturer (lectures, tutorials and seminars)
+  org: ENSSMAL – National Higher School of Marine Sciences and Coastal Management, Algiers
+  start: '2018-10-01'
+  end: '2020-06-30'
+  summary: Courses for fifth-year engineering students.
+- role: University focal point for the TAWDIF I and II project
+  org: University of Algiers 3 – ILO project in partnership with the Ministry of Higher Education
+  start: '2018-02-01'
+  end: '2021-06-30'
+- role: Business experience
+  org: Business management and international trade between Europe and the Maghreb
+  start: '2013-10-01'
+  end: '2022-06-30'
+  summary: Management of import–export operations, organisation of international logistics and expertise in international payment methods (documentary credit, documentary collection).
+- role: Early-career researcher – CEME laboratory (Centre for the Study of Change in Europe)
+  org: Paris 8 Vincennes University – Institute of European Studies
+  start: '2008-10-01'
+  end: '2013-07-31'
+skills:
+- name: Statistical and survey tools
+  items:
+  - label: SPSS
+  - label: CSPro
+  - label: Google Forms
+  - label: Microsoft Office / OpenOffice
+- name: Instructional design
+  items:
+  - label: Moodle
+  - label: Opale 3.6
+  - label: VUE (concept maps)

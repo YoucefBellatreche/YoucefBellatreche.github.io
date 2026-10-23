@@ -1,0 +1,108 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Dr Youcef Bellatreche
+  given: Youcef
+  family: Bellatreche
+  alternate: يوسف بلطرش
+postnominals:
+- HDR
+role: Maître de conférences classe A (HDR) en sciences économiques
+bio: Maître de conférences habilité à diriger des recherches à l'Université Alger 3 et docteur en sciences économiques de l'Institut d'études européennes, Université Paris 8 Vincennes, je travaille sur l'orientation et l'insertion professionnelles des jeunes diplômés, l'emploi, le chômage et le revenu, l'entrepreneuriat et la création d'entreprises, le développement économique des pays en développement et les politiques d'intégration régionale Nord-Sud. Je suis, depuis 2025, responsable du Centre de développement de carrières (CDC) de l'université. Mon parcours comprend aussi plusieurs années d'expérience dans le monde des affaires, en gestion d'entreprise et en commerce international entre l'Europe et le Maghreb.
+affiliations:
+- name: Université Alger 3
+  url: https://www.univ-alger3.dz/
+links:
+- icon: at-symbol
+  url: mailto:bellatreche.youcef@univ-alger3.dz
+  label: Me contacter
+interests:
+- Orientation et insertion professionnelles des jeunes diplômés
+- Emploi, chômage et revenu
+- Entrepreneuriat, innovation et création d'entreprises
+- Développement économique des pays en développement
+- Politiques économiques d'intégration régionale (Nord-Sud)
+education:
+- degree: Habilitation universitaire (HDR) en sciences économiques
+  institution: Université Alger 3
+  end: '2021-11-30'
+- degree: Doctorat en sciences économiques
+  institution: Université Paris 8 Vincennes – Institut d'études européennes
+  end: '2013-07-31'
+  summary: 'Thèse : *Le partenariat entre l''Algérie et l''Union européenne pour le développement : une transition difficile vers l''économie de marché*, soutenue en juillet 2013 à l''Institut d''études européennes (IEE), laboratoire CEME (Centre d''études des mutations en Europe). Direction : Pr Bernard Maris ; co-direction : Dr Gilles Raveaud, maître de conférences. Mention très honorable. [Lire le résumé de la thèse →](/publications/these-doctorat/)'
+- degree: DEA (grade de master) – Études des sociétés contemporaines du Maghreb
+  institution: Institut Maghreb-Europe, Université Paris 8 Vincennes
+  end: '2006-01-31'
+  summary: 'Mémoire : *Les enjeux socio-économiques et politiques de la crise du logement en Algérie*. Co-direction : Pr Aïssa Kadri et Pr Gérard Prévost.'
+- degree: Maîtrise en sciences économiques – Économie internationale
+  institution: Université Paris 8 Vincennes (UFR AES)
+  end: '2005-12-31'
+  summary: UFR Administration économique et sociale (AES), option Économie internationale.
+- degree: Licence (bac+4) en sciences commerciales – option Finances
+  institution: Université Saad Dahleb, Blida
+  end: '2002-06-30'
+  summary: 'Mémoire : *La privatisation du secteur bancaire en Algérie : la nécessité face aux difficultés*, avec une étude de cas réalisée lors d''un stage de fin d''études dans une société d''investissement financier à Alger.'
+- degree: Baccalauréat – série Gestion et économie
+  institution: Lycée Si El Houes, Lakhdaria (Bouira)
+  end: '1997-06-30'
+experience:
+- role: Maître de conférences classe A (HDR)
+  org: Université Alger 3 – départements de sciences économiques, de sciences de gestion et de communication
+  start: '2017-02-01'
+  summary: 'Cours magistraux et travaux dirigés en licence et en master : départements des sciences économiques, des sciences de gestion et des sciences commerciales.'
+- role: Membre du laboratoire de la gouvernance et de la modernisation du management public
+  org: Université Alger 3 – équipe de recherche sur le management des carrières professionnelles
+  start: '2025-09-01'
+- role: Responsable du Centre de développement de carrières (CDC)
+  org: Université Alger 3
+  start: '2025-02-01'
+  summary: Interface universitaire spécialisée dans la formation et l'orientation professionnelle des étudiants.
+- role: Attaché d'enseignement et de recherche (ATER)
+  org: Université Paris 1 Panthéon-Sorbonne – École d'Économie de la Sorbonne (UFR 02)
+  start: '2022-09-01'
+  end: '2024-09-30'
+  summary: Membre de l'École d'Économie de la Sorbonne (UFR 02, Centre Pierre Mendès France). Cours et travaux dirigés de la première à la troisième année de licence.
+- role: Chercheur invité – équipe Économie politique
+  org: Centre d'Économie de la Sorbonne (CES), Université Paris 1 Panthéon-Sorbonne
+  start: '2022-11-01'
+- role: Directeur de la Maison de l'entrepreneuriat
+  org: Université Alger 3
+  start: '2020-01-01'
+  end: '2021-01-31'
+  summary: Formations et tables rondes de partage d'expériences, journées portes ouvertes sur l'entrepreneuriat avec des organismes publics et privés, suivi des projets d'investissement des étudiants avec les banques et l'ANADE.
+- role: Conseiller d'orientation professionnelle certifié (World Learning Algeria)
+  org: Université Alger 3
+  start: '2019-04-01'
+  end: '2022-06-30'
+  summary: Animateur et formateur en techniques de recherche d'emploi au CDC de l'Université Alger 3.
+- role: Chargé de cours, de travaux dirigés et de conférences (vacations)
+  org: ENSSMAL – École nationale supérieure des sciences de la mer et de l'aménagement du littoral, Alger
+  start: '2018-10-01'
+  end: '2020-06-30'
+  summary: Enseignements destinés aux élèves ingénieurs de 5e année.
+- role: Point focal de l'université pour le projet TAWDIF I et II
+  org: Université Alger 3 – projet de l'OIT en partenariat avec le MESRS
+  start: '2018-02-01'
+  end: '2021-06-30'
+- role: Expérience dans le monde des affaires
+  org: Gestion d'entreprise et commerce international entre l'Europe et le Maghreb
+  start: '2013-10-01'
+  end: '2022-06-30'
+  summary: Gestion d'opérations commerciales d'import-export, organisation de la logistique internationale et maîtrise des techniques de paiement à l'international (crédit documentaire, remise documentaire).
+- role: Jeune chercheur – laboratoire CEME (Centre d'études des mutations en Europe)
+  org: Université Paris 8 Vincennes – Institut d'études européennes
+  start: '2008-10-01'
+  end: '2013-07-31'
+skills:
+- name: Outils statistiques et d'enquête
+  items:
+  - label: SPSS
+  - label: CSPro
+  - label: Google Forms
+  - label: Microsoft Office / OpenOffice
+- name: Ingénierie pédagogique
+  items:
+  - label: Moodle
+  - label: Opale 3.6
+  - label: VUE (cartes conceptuelles)

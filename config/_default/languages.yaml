@@ -1,0 +1,62 @@
+# Langues du site (généré par gen/build.py)
+fr:
+  locale: fr-fr
+  label: Français
+  contentDir: content/fr
+  weight: 1
+  title: Dr Youcef Bellatreche
+  params:
+    description: "Site personnel du Dr Youcef Bellatreche, maître de conférences HDR en sciences économiques à l'Université Alger 3 : parcours, publications, projets et réflexions."
+    hugoblox:
+      identity:
+        name: Blog de recherche
+  menus:
+    main:
+      - {name: "Accueil", url: /, weight: 10}
+      - {name: "Parcours", url: parcours/, weight: 20}
+      - {name: "Publications", url: publications/, weight: 30}
+      - {name: "Communications", url: communications/, weight: 40}
+      - {name: "Projets", url: projets/, weight: 50}
+      - {name: "Enseignement", url: enseignement/, weight: 60}
+      - {name: "Réflexions", url: reflexions/, weight: 70}
+ar:
+  locale: ar
+  label: العربية
+  direction: rtl
+  contentDir: content/ar
+  weight: 2
+  title: د. يوسف بلطرش
+  params:
+    description: "الموقع الشخصي للدكتور يوسف بلطرش، أستاذ محاضر قسم «أ» مؤهل للإشراف على البحوث في العلوم الاقتصادية بجامعة الجزائر 3: المسار، المنشورات، المشاريع والتأملات."
+    hugoblox:
+      identity:
+        name: مدونة بحثية
+  menus:
+    main:
+      - {name: "الرئيسية", url: /, weight: 10}
+      - {name: "المسار", url: parcours/, weight: 20}
+      - {name: "المنشورات", url: publications/, weight: 30}
+      - {name: "المداخلات", url: communications/, weight: 40}
+      - {name: "المشاريع", url: projets/, weight: 50}
+      - {name: "التدريس", url: enseignement/, weight: 60}
+      - {name: "تأملات", url: reflexions/, weight: 70}
+en:
+  locale: en-us
+  label: English
+  contentDir: content/en
+  weight: 3
+  title: Dr Youcef Bellatreche
+  params:
+    description: "Personal website of Dr Youcef Bellatreche, Associate Professor (HDR) of Economics at the University of Algiers 3: background, publications, projects and reflections."
+    hugoblox:
+      identity:
+        name: Research Blog
+  menus:
+    main:
+      - {name: "Home", url: /, weight: 10}
+      - {name: "Background", url: parcours/, weight: 20}
+      - {name: "Publications", url: publications/, weight: 30}
+      - {name: "Talks", url: communications/, weight: 40}
+      - {name: "Projects", url: projets/, weight: 50}
+      - {name: "Teaching", url: enseignement/, weight: 60}
+      - {name: "Reflections", url: reflexions/, weight: 70}

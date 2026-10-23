@@ -1,0 +1,560 @@
+/* =====================================================================
+   Habillage « Bleu nuit et or » – site du Dr Youcef Bellatreche
+   Bleu nuit : rigueur académique · Or : distinction
+   Animations douces, coupées si l'utilisateur préfère réduire les mouvements
+   ===================================================================== */
+
+:root {
+  --yb-night: #0a1633;
+  --yb-navy: #12245a;
+  --yb-royal: #1e3a8a;
+  --yb-sky: #3b82f6;
+  --yb-gold: #d4a72c;
+  --yb-gold-light: #f3d27a;
+  --yb-gold-deep: #a97f12;
+  --yb-ink: #0f1d3d;
+  --yb-paper: #fbf8f1;
+  --yb-gold-grad: linear-gradient(90deg, var(--yb-gold-deep), var(--yb-gold-light) 50%, var(--yb-gold-deep));
+}
+
+body {
+  background: var(--yb-paper);
+}
+:root.dark body {
+  background: #070f24;
+}
+
+/* ---------- Barre de navigation ---------- */
+#site-header {
+  position: relative;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(10px);
+}
+:root.dark #site-header {
+  background: rgba(10, 22, 51, .92);
+}
+#site-header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 3px;
+  background: var(--yb-gold-grad);
+  background-size: 200% 100%;
+  animation: yb-shine 6s linear infinite;
+}
+#site-header nav a {
+  position: relative;
+  transition: color .25s ease;
+}
+#site-header nav a:hover {
+  color: var(--yb-gold-deep);
+}
+
+/* ---------- Bandeau d'accueil : bleu nuit étoilé, lueurs dorées ---------- */
+.hb-hero {
+  background:
+    radial-gradient(70% 90% at 0% 0%, #1b3478 0%, transparent 60%),
+    radial-gradient(60% 80% at 100% 100%, #16306e 0%, transparent 60%),
+    linear-gradient(160deg, var(--yb-night), var(--yb-navy) 55%, #0d1b44);
+  color: #e8edf8;
+}
+.hb-hero > div[class*="absolute"]:first-child {
+  opacity: .25;
+}
+.hb-hero::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(28% 32% at 18% 30%, rgba(212, 167, 44, .28), transparent 70%),
+    radial-gradient(24% 30% at 82% 22%, rgba(59, 130, 246, .30), transparent 70%),
+    radial-gradient(30% 34% at 70% 85%, rgba(243, 210, 122, .18), transparent 70%);
+  filter: blur(14px);
+  animation: yb-aurora 26s ease-in-out infinite alternate;
+}
+.hb-hero::after {
+  /* fines étoiles */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1.4px 1.4px at 12% 18%, rgba(255, 255, 255, .7), transparent),
+    radial-gradient(1.2px 1.2px at 32% 72%, rgba(255, 255, 255, .55), transparent),
+    radial-gradient(1.6px 1.6px at 58% 12%, rgba(243, 210, 122, .8), transparent),
+    radial-gradient(1.2px 1.2px at 76% 58%, rgba(255, 255, 255, .5), transparent),
+    radial-gradient(1.4px 1.4px at 90% 30%, rgba(255, 255, 255, .6), transparent),
+    radial-gradient(1.2px 1.2px at 46% 40%, rgba(243, 210, 122, .6), transparent),
+    radial-gradient(1px 1px at 8% 88%, rgba(255, 255, 255, .5), transparent),
+    radial-gradient(1.3px 1.3px at 66% 92%, rgba(255, 255, 255, .45), transparent);
+  animation: yb-twinkle 5s ease-in-out infinite alternate;
+}
+.hb-hero > * {
+  position: relative;
+  z-index: 1;
+}
+.hb-hero h1 {
+  color: #fff !important;
+  letter-spacing: -.01em;
+  text-shadow: 0 2px 24px rgba(212, 167, 44, .25);
+}
+/* titre / poste en or */
+.hb-hero h1 + * ,
+.hb-hero [class*="text-primary"] {
+  color: var(--yb-gold-light) !important;
+}
+/* cartes de diplômes : verre fumé */
+.hb-hero [class*="rounded"][class*="shadow"]:not(.avatar):not([href$="CV_Youcef_Bellatreche.pdf"]),
+.hb-hero [class*="rounded-xl"]:not(.avatar):not([href$="CV_Youcef_Bellatreche.pdf"]),
+.hb-hero [class*="rounded-2xl"]:not(.avatar):not([href$="CV_Youcef_Bellatreche.pdf"]) {
+  background: rgba(255, 255, 255, .06) !important;
+  border: 1px solid rgba(243, 210, 122, .22) !important;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, .6) !important;
+  backdrop-filter: blur(6px);
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), border-color .35s ease, background .35s ease;
+}
+.hb-hero [class*="rounded-xl"]:hover,
+.hb-hero [class*="rounded-2xl"]:hover {
+  transform: translateY(-4px);
+  border-color: rgba(243, 210, 122, .6) !important;
+  background: rgba(255, 255, 255, .1) !important;
+}
+/* pastilles des domaines de recherche */
+.hb-hero [class*="rounded-full"]:not(.avatar):not(img) {
+  border-color: rgba(243, 210, 122, .35) !important;
+}
+
+/* Photo : cercle doré avec halo qui respire */
+.hb-hero .avatar {
+  border: 4px solid var(--yb-gold) !important;
+  box-shadow: 0 0 0 8px rgba(212, 167, 44, .16), 0 0 45px rgba(212, 167, 44, .35), 0 25px 50px -15px rgba(0, 0, 0, .7) !important;
+  animation: yb-glow 4s ease-in-out infinite alternate;
+}
+
+/* Nom dans l'autre écriture, sous le nom principal */
+.hb-hero h1::after {
+  display: block;
+  margin-top: .35rem;
+  font-size: .5em;
+  font-weight: 600;
+  color: var(--yb-gold-light);
+  letter-spacing: 0;
+}
+:lang(fr) .hb-hero h1::after,
+:lang(en) .hb-hero h1::after {
+  content: "يوسف بلطرش";
+  font-family: "Amiri", "Noto Naskh Arabic", "Geeza Pro", serif;
+}
+:lang(ar) .hb-hero h1::after {
+  content: "Youcef Bellatreche";
+}
+
+/* ---------- Titres de sections : bleu nuit + filet doré ---------- */
+.hbb-section .mb-6.text-3xl.font-bold {
+  position: relative;
+  padding-bottom: .75rem;
+  color: var(--yb-ink);
+  letter-spacing: -.01em;
+}
+:root.dark .hbb-section .mb-6.text-3xl.font-bold,
+.hb-stats .mb-6.text-3xl.font-bold {
+  color: #fff;
+}
+.hbb-section .mb-6.text-3xl.font-bold::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 64px;
+  height: 3px;
+  border-radius: 99px;
+  transform: translateX(-50%);
+  background: var(--yb-gold-grad);
+  background-size: 200% 100%;
+  animation: yb-shine 5s linear infinite;
+}
+.hbb-section .mb-6.text-3xl.font-bold::before {
+  content: "◆";
+  position: absolute;
+  left: 50%;
+  bottom: -.42rem;
+  transform: translateX(-50%);
+  font-size: .6rem;
+  color: var(--yb-gold);
+}
+
+/* ---------- Chiffres clés : bande bleu nuit, chiffres dorés ---------- */
+.hb-stats {
+  background: linear-gradient(180deg, var(--yb-night), var(--yb-navy)) !important;
+}
+.hb-stats h2,
+.hb-stats .text-3xl {
+  color: #fff !important;
+}
+.hb-stats .stats-item {
+  background: rgba(255, 255, 255, .05) !important;
+  border: 1px solid rgba(243, 210, 122, .22) !important;
+  box-shadow: none !important;
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), border-color .35s ease, box-shadow .35s ease;
+}
+.hb-stats .stats-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(243, 210, 122, .65) !important;
+  box-shadow: 0 25px 45px -20px rgba(212, 167, 44, .45) !important;
+}
+.hb-stats .stats-item > div[class*="absolute"] {
+  display: none;
+}
+.hb-stats .stats-item .rounded-xl {
+  background: rgba(212, 167, 44, .14) !important;
+}
+.hb-stats .stats-item svg {
+  color: var(--yb-gold-light) !important;
+}
+.hb-stats .stats-item p,
+.hb-stats .stats-item [class*="text-gray"] {
+  color: #c9d3ea !important;
+}
+.hb-stats .stats-item .counter,
+.hb-stats .stats-item .counter * {
+  color: var(--yb-gold-light) !important;
+  text-shadow: 0 0 30px rgba(212, 167, 44, .35);
+}
+
+/* ---------- Cartes (projets, réflexions) ---------- */
+.group.rounded-2xl:not(.stats-item) {
+  position: relative;
+  background: #fff !important;
+  border: 1px solid rgba(15, 29, 61, .06);
+}
+:root.dark .group.rounded-2xl:not(.stats-item) {
+  background: #0e1d45 !important;
+}
+.group.rounded-2xl:not(.stats-item)::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 2;
+  background: var(--yb-gold-grad);
+  background-size: 200% 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1);
+  animation: yb-shine 5s linear infinite;
+}
+[dir="rtl"] .group.rounded-2xl:not(.stats-item)::before {
+  transform-origin: right;
+}
+.group.rounded-2xl:not(.stats-item):hover::before {
+  transform: scaleX(1);
+}
+.group.rounded-2xl:not(.stats-item):hover {
+  box-shadow: 0 30px 55px -28px rgba(10, 22, 51, .55) !important;
+}
+.group.rounded-2xl:not(.stats-item) img {
+  transition: transform .9s cubic-bezier(.2, .8, .2, 1);
+}
+.group.rounded-2xl:not(.stats-item):hover img {
+  transform: scale(1.05);
+}
+
+/* ---------- Publications ---------- */
+.pub-list-item {
+  padding: 1rem 1.2rem;
+  border-radius: .75rem;
+  background: #fff;
+  border: 1px solid rgba(15, 29, 61, .06);
+  border-inline-start: 4px solid var(--yb-gold);
+  box-shadow: 0 8px 22px -18px rgba(10, 22, 51, .45);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.pub-list-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 16px 32px -20px rgba(10, 22, 51, .6);
+}
+[dir="rtl"] .pub-list-item:hover {
+  transform: translateX(-4px);
+}
+:root.dark .pub-list-item {
+  background: #0e1d45;
+}
+
+/* ---------- Listes chronologiques (communications, responsabilités) ---------- */
+.hb-timeline .prose ul {
+  list-style: none;
+  padding-inline-start: 0;
+  position: relative;
+}
+.hb-timeline .prose ul::before {
+  content: "";
+  position: absolute;
+  inset-block: .4rem;
+  inset-inline-start: 9px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--yb-royal), var(--yb-gold));
+}
+.hb-timeline .prose ul > li {
+  position: relative;
+  padding-inline-start: 2.4rem;
+  margin-block: 1.4rem;
+}
+.hb-timeline .prose ul > li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 3px;
+  top: .5em;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--yb-gold);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--yb-royal);
+}
+
+/* ---------- Liens dans le texte ---------- */
+.prose a {
+  text-decoration-color: var(--yb-gold);
+  text-underline-offset: 3px;
+}
+
+/* ---------- Pied de page bleu nuit ---------- */
+footer {
+  position: relative;
+  max-width: none !important;
+  margin-bottom: 0 !important;
+  padding: 2.2rem 1rem 1.6rem;
+  background: var(--yb-night);
+  color: #c7d0e6 !important;
+}
+footer a {
+  color: var(--yb-gold-light) !important;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--yb-gold-grad);
+}
+
+/* ---------- Apparition au défilement (navigateurs récents) ---------- */
+@supports (animation-timeline: view()) {
+  .hbb-section:not(.hb-hero) > * {
+    animation: yb-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+
+/* ---------- Animations ---------- */
+@keyframes yb-shine {
+  from { background-position: 0% 50%; }
+  to { background-position: 200% 50%; }
+}
+@keyframes yb-aurora {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(4%, -3%, 0) scale(1.08); }
+  100% { transform: translate3d(-3%, 3%, 0) scale(1.02); }
+}
+@keyframes yb-twinkle {
+  from { opacity: .45; }
+  to { opacity: 1; }
+}
+@keyframes yb-glow {
+  from { box-shadow: 0 0 0 6px rgba(212, 167, 44, .12), 0 0 25px rgba(212, 167, 44, .25), 0 25px 50px -15px rgba(0, 0, 0, .7); }
+  to { box-shadow: 0 0 0 10px rgba(212, 167, 44, .22), 0 0 60px rgba(212, 167, 44, .45), 0 25px 50px -15px rgba(0, 0, 0, .7); }
+}
+@keyframes yb-reveal {
+  from { opacity: 0; transform: translateY(36px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Réflexions mises en avant sur l'accueil ---------- */
+.hb-refl {
+  background:
+    radial-gradient(60% 90% at 100% 0%, rgba(212, 167, 44, .10), transparent 60%),
+    linear-gradient(180deg, #fff, var(--yb-paper));
+  border-bottom: 1px solid rgba(15, 29, 61, .06);
+}
+.hb-refl .mb-6.text-3xl.font-bold::before {
+  content: "✎";
+  bottom: auto;
+  top: -1.9rem;
+  font-size: 1.3rem;
+}
+.hb-refl article,
+.hb-refl .view-date-title-summary,
+.hb-refl [class*="space-y"] > div {
+  position: relative;
+}
+.hb-refl a h3,
+.hb-refl h3 a,
+.hb-refl h3 {
+  color: var(--yb-ink);
+  transition: color .25s ease;
+}
+.hb-refl a:hover h3,
+.hb-refl h3 a:hover {
+  color: var(--yb-gold-deep);
+}
+
+/* Onglet « Réflexions » mis en valeur dans le menu */
+#site-header nav a[href*="reflexions"] {
+  color: var(--yb-ink) !important;
+  background: linear-gradient(180deg, #fff3cf, #f3d27a);
+  border-radius: 999px;
+  padding-inline: .7rem !important;
+  box-shadow: 0 4px 14px -6px rgba(169, 127, 18, .6);
+}
+:root.dark #site-header nav a[href*="reflexions"] {
+  color: var(--yb-night) !important;
+}
+
+.hb-refl article {
+  background: #fff;
+  border: 1px solid rgba(15, 29, 61, .07);
+  border-inline-start: 4px solid var(--yb-gold);
+  border-radius: .9rem;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 14px 30px -24px rgba(10, 22, 51, .55);
+  min-width: min(46rem, 88vw);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.hb-refl article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 40px -24px rgba(10, 22, 51, .6);
+}
+.hb-refl article h2 {
+  font-size: 1.15rem !important;
+  color: var(--yb-ink) !important;
+}
+.hb-refl article time {
+  color: var(--yb-gold-deep) !important;
+  font-weight: 600;
+}
+.hb-refl [class*="space-y-16"] > * + * {
+  margin-top: 1.2rem !important;
+}
+.hb-refl [class*="-inset-x-4"][class*="bg-zinc-50"] {
+  display: none;
+}
+
+/* =====================================================================
+   Ajouts d'octobre 2026
+   ===================================================================== */
+
+/* ---------- Arrière-plan « bibliothèque » discret ---------- */
+html {
+  background: var(--yb-paper);
+}
+body {
+  background: transparent !important;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("../media/library.jpg") center / cover no-repeat;
+  opacity: .16;
+  filter: sepia(.2) saturate(.85);
+}
+:root.dark {
+  background: #070f24;
+}
+:root.dark body::before {
+  opacity: .14;
+  filter: grayscale(.2) brightness(.8);
+}
+.hb-hero {
+  background:
+    linear-gradient(160deg, rgba(10, 22, 51, .84), rgba(18, 36, 90, .74) 55%, rgba(13, 27, 68, .86)),
+    url("../media/library.jpg") center / cover no-repeat !important;
+}
+.hb-stats {
+  background:
+    linear-gradient(180deg, rgba(10, 22, 51, .86), rgba(18, 36, 90, .84)),
+    url("../media/library.jpg") center 70% / cover no-repeat !important;
+}
+
+/* ---------- Texte justifié ---------- */
+.prose p,
+.prose li,
+.bio-text,
+.bio-text p,
+.pub-list-item,
+.hb-refl article p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  text-align: start;
+}
+
+/* ---------- « Enseignant-chercheur » sous le nom ---------- */
+.hb-hero h1 + p::before {
+  display: block;
+  margin: .2rem 0 .35rem;
+  font-size: .78em;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: .92;
+}
+:lang(fr) .hb-hero h1 + p::before { content: "Enseignant-chercheur"; }
+:lang(en) .hb-hero h1 + p::before { content: "Lecturer-researcher"; }
+:lang(ar) .hb-hero h1 + p::before { content: "أستاذ باحث"; letter-spacing: 0; }
+
+/* ---------- Nom du site dans la barre de menu ---------- */
+
+/* ---------- Mode sombre cohérent sur tout le site ---------- */
+:root.dark .hbb-section .mb-6.text-3xl.font-bold { color: #f5f7fc; }
+:root.dark .hb-refl {
+  background: radial-gradient(60% 90% at 100% 0%, rgba(212, 167, 44, .08), transparent 60%), transparent;
+  border-bottom-color: rgba(255, 255, 255, .06);
+}
+:root.dark .hb-refl article,
+:root.dark .pub-list-item,
+:root.dark .group.rounded-2xl:not(.stats-item) {
+  background: #0e1d45 !important;
+  border-color: rgba(243, 210, 122, .18) !important;
+}
+:root.dark .hb-refl article h2,
+:root.dark .hb-refl a h3 { color: #f5f7fc !important; }
+:root.dark .hb-timeline .prose ul > li::before { border-color: #0e1d45; }
+:root.dark .prose { color: #d7dcea; }
+:root.dark #site-header nav a { color: #e8edf8; }
+:root.dark #site-header nav a[href*="reflexions"] { color: var(--yb-night) !important; }
+
+/* ---------- Publications : lien PDF mis en valeur ---------- */
+a[href$=".pdf"] {
+  border-color: var(--yb-gold) !important;
+}
+
+/* Bouton « Télécharger mon CV » */
+.hb-hero a[href$="CV_Youcef_Bellatreche.pdf"].inline-flex {
+  background: linear-gradient(180deg, #f6dc8f, #d4a72c) !important;
+  color: #0a1633 !important;
+  background-image: linear-gradient(180deg, #f6dc8f, #d4a72c) !important;
+  border: 0 !important;
+  font-weight: 700;
+  box-shadow: 0 10px 24px -10px rgba(212, 167, 44, .8);
+}
+.hb-hero a[href$="CV_Youcef_Bellatreche.pdf"].inline-flex:hover { filter: brightness(1.06); }
+/* lisibilité sur fond plus visible */
+.prose, .hb-refl article, .pub-list-item { position: relative; }
