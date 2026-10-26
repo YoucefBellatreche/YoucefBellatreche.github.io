@@ -7,9 +7,6 @@ sections:
     content:
       username: me
       text: ''
-      button:
-        text: "Download my CV (PDF, in French)"
-        url: /uploads/CV_Youcef_Bellatreche.pdf
       headings:
         about: "About"
         education: "Education"

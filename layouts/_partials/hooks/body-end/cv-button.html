@@ -1,0 +1,19 @@
+{{/* Petit bouton « CV » dans la barre de navigation, en haut à droite */}}
+{{- $lang := site.Language.Lang -}}
+{{- $label := cond (eq $lang "ar") "السيرة الذاتية" "CV" -}}
+{{- $title := "Télécharger mon CV (PDF)" -}}
+{{- if eq $lang "ar" }}{{ $title = "تحميل السيرة الذاتية (PDF، بالفرنسية)" }}{{ end -}}
+{{- if eq $lang "en" }}{{ $title = "Download my CV (PDF, in French)" }}{{ end -}}
+<a id="cv-mini" class="cv-mini" href="{{ "uploads/CV_Youcef_Bellatreche.pdf" | relURL }}" target="_blank" rel="noopener" title="{{ $title }}" aria-label="{{ $title }}" style="display:none">
+  <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l3.3 3.3V4a1 1 0 0 1 1-1zM5 19h14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2z"/></svg>
+  <span>{{ $label }}</span>
+</a>
+<script>
+(function () {
+  var a = document.getElementById('cv-mini');
+  var box = document.querySelector('nav.navbar .order-1.ml-auto');
+  if (!a || !box) return;
+  box.insertBefore(a, box.firstChild);
+  a.style.display = '';
+})();
+</script>

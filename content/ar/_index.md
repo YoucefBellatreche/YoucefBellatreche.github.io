@@ -7,9 +7,6 @@ sections:
     content:
       username: me
       text: ''
-      button:
-        text: "تحميل السيرة الذاتية (PDF، بالفرنسية)"
-        url: /uploads/CV_Youcef_Bellatreche.pdf
       headings:
         about: "نبذة"
         education: "التكوين الجامعي"

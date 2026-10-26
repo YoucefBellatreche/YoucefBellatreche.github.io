@@ -558,3 +558,24 @@ a[href$=".pdf"] {
 .hb-hero a[href$="CV_Youcef_Bellatreche.pdf"].inline-flex:hover { filter: brightness(1.06); }
 /* lisibilité sur fond plus visible */
 .prose, .hb-refl article, .pub-list-item { position: relative; }
+
+/* Petit bouton « CV » en haut à droite de la barre de navigation */
+.cv-mini {
+  display: inline-flex; align-items: center; gap: .3rem;
+  margin-inline-end: .35rem; padding: .22rem .6rem;
+  font-size: .74rem; font-weight: 700; line-height: 1; letter-spacing: .02em;
+  color: #0a1633 !important; text-decoration: none !important; white-space: nowrap;
+  background: linear-gradient(180deg, #f6dc8f, #d4a72c);
+  border-radius: 999px; box-shadow: 0 4px 12px -6px rgba(212, 167, 44, .9);
+  transition: filter .2s ease, transform .2s ease;
+}
+.cv-mini:hover { filter: brightness(1.07); transform: translateY(-1px); }
+:lang(ar) .cv-mini { font-size: .8rem; }
+@media (min-width: 1024px) {
+  nav.navbar .nav-link { padding-left: .75rem !important; padding-right: .75rem !important; }
+  nav.navbar .navbar-nav > li { margin-inline: 0 !important; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  nav.navbar .nav-link { padding-left: .42rem !important; padding-right: .42rem !important; font-size: .9rem !important; }
+  nav.navbar .navbar-brand { font-size: 1rem !important; }
+}
